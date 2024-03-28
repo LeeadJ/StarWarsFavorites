@@ -11,17 +11,24 @@ const movieImages = {
 };
 
 function MovieItem({ movie, onMovieSelect }) {
+
   const imageFileName = movieImages[movie.title];
+
+    const moviePosterStyle = {
+      backgroundImage: `url(${require(`../../images/${imageFileName}.png`)})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    };
   
   return (
-    <div key={movie.episode_id} className={`movie-poster-container`}>
-      <img
-      src={require(`../../images/${imageFileName}.png`)}
-      alt={movie.title}
+    <button
+      key={movie.episode_id}
+      className={`movie-poster-container`}
+      style={moviePosterStyle}
       onClick={() => onMovieSelect(movie)}
-      style={{ cursor: 'pointer' }}
-      />
-    </div>
+    >
+      <span className='movie-title'>{movie.title}</span>
+    </button>
   );
 }
 

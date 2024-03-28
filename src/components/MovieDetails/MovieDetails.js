@@ -22,7 +22,6 @@ function MovieDetails({ movie, onFavoriteToggle, favorites }) {
 
     return (
       <div className='movie-poster'  style={moviePosterStyle}>
-        
         <div className='left'>
           <h2>
               {movie.title.split(' ').map((word, index) => (
@@ -32,9 +31,8 @@ function MovieDetails({ movie, onFavoriteToggle, favorites }) {
           <button className='likeBtn' onClick={() => onFavoriteToggle(movie)}>
             <div className='iconBox'>
               <img src={require('../../icons/starIcon.png')} alt='star'/>
-              {favorites.some(fav => fav.episode_id === movie.episode_id) ? "Dislike" : "Like"}
+              <span className='likeText'>{favorites.some(fav => fav.episode_id === movie.episode_id) ? "Dislike" : "Like"}</span>
             </div>
-            
           </button>
           {/* <p><strong>Episode:</strong> {movie.episode_id}</p> */}
       </div>
