@@ -1,0 +1,7 @@
+.moviesList {
+    background-color: aqua;
+    display: flex;
+    justify-content: space;
+    align-items: center;
+    gap: 1%;
+}

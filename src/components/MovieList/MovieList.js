@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchMovies } from '@/services/api';
 import MovieItem from '@/components/MovieItem/MovieItem';
 import Loading from '@/components/Loading/Loading';
+import './movieList.css';
 
 function MovieList({ onMovieSelect }) {
   const [movies, setMovies] = useState([]);
@@ -23,7 +24,7 @@ function MovieList({ onMovieSelect }) {
   }, []);
 
   return (
-    <div>
+    <div className='moviesList'>
         {isLoading ? (
             <Loading message="Loading Movies..."/>
         ) : (

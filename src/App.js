@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MovieList from '@/components/MovieList/MovieList';
 import MovieDetails from '@/components/MovieDetails/MovieDetails';
+import './App.css';
 
 function App() {
   const initialFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -25,8 +26,15 @@ function App() {
 
   return (
     <div className="App">
-      <MovieDetails movie={selectedMovie} favorites={favorites} />
-      <MovieList onMovieSelect={handleMovieSelect}/>
+      <div className='mainContainer'>
+        <div className='chosenMovieContainer'>
+          <MovieDetails movie={selectedMovie} favorites={favorites} onFavoriteToggle={handleFavorite}/>
+        </div>
+        <div className='movieListContainer'>
+          <MovieList onMovieSelect={handleMovieSelect}/>
+        </div>
+      </div>
+      
     </div>
   );
 

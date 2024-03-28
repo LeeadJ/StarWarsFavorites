@@ -1,0 +1,60 @@
+.movie-poster {
+    border: 2px solid white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    /* align-items: baseline; */
+    border-radius: 15px;
+    /* padding: 0 10%; */
+    /* gap: 20px; */
+
+}
+.right, .left{
+    width: 50%;
+    height: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.movie-poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: whitesmoke;
+    font-size: 2.5rem;
+    line-height: 0.8;
+    font-weight: 800;
+    background-color: black;
+}
+
+.likeBtn {
+    background: none;
+    border: none;
+    width: auto;
+    height: auto;
+    align-self: flex-start;
+    margin-left: 5.5vw;
+}
+.likeBtn img {
+    width: 70px;
+    height: 70px;
+}
+  
+.iconBox {
+    width: 20px;
+    height: 20px;
+}
