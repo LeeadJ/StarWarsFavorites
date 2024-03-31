@@ -10,14 +10,15 @@ const movieImages = {
   "Revenge of the Sith" : "revngeOfTheSith3"
 };
 
-function MovieItem({ movie, onMovieSelect }) {
-
+function MovieItem({ movie, onMovieSelect, favorites }) {
   const imageFileName = movieImages[movie.title];
+  const isFavorite = favorites.some(fav => fav.episode_id === movie.episode_id);
 
     const moviePosterStyle = {
       backgroundImage: `url(${require(`../../images/${imageFileName}.png`)})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
+      border: isFavorite ? '5px solid gold' : 'none', //adds gold border to favoritie movies
     };
   
   return (

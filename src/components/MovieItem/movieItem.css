@@ -1,10 +1,11 @@
 .movie-poster-container {
-    width: 100%; 
-    height: 300px;
+    width: calc(16.666% - 1%); 
+    height: auto; 
     transition: transform 0.5s;
     border-radius: 15px;
     text-align: center;
     position: relative;
+    
   }
 
   .movie-poster-container:hover {
@@ -19,13 +20,20 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    color: white;
+    color: whitesmoke;
     padding: 8px;
     text-align: center;
     font-weight: 900;
-    font-size: 100%;
+    font-size: 0.9=8rem;
   }
 
 
+  @media screen and (max-width: 768px) {
+.movie-poster-container {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5%;
+  }
+}
   
   

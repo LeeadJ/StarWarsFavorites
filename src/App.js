@@ -13,9 +13,11 @@ function App() {
   }, [favorites]);
 
   const handleFavorite = (movie) => {
+    //check if movie is already in favorites. If so, removes it from favorits list.
     if (favorites.some(fav => fav.episode_id === movie.episode_id)) {
       setFavorites(favorites.filter(fav => fav.episode_id !== movie.episode_id));
     } else {
+      // if not in favorits, adds movie to the list.
       setFavorites([...favorites, movie]);
     }
   };
@@ -31,7 +33,7 @@ function App() {
           <MovieDetails movie={selectedMovie} favorites={favorites} onFavoriteToggle={handleFavorite}/>
         </div>
         <div className='movieListContainer'>
-          <MovieList onMovieSelect={handleMovieSelect}/>
+          <MovieList onMovieSelect={handleMovieSelect} favorites={favorites}/>
         </div>
       </div>
       

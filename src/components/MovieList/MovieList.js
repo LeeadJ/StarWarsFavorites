@@ -4,7 +4,7 @@ import MovieItem from '@/components/MovieItem/MovieItem';
 import Loading from '@/components/Loading/Loading';
 import './movieList.css';
 
-function MovieList({ onMovieSelect }) {
+function MovieList({ onMovieSelect, favorites}) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,7 +29,7 @@ function MovieList({ onMovieSelect }) {
             <Loading message="Loading Movies..."/>
         ) : (
           movies.map(movie => (
-            <MovieItem key={movie.episode_id} movie={movie} onMovieSelect={onMovieSelect} />
+            <MovieItem key={movie.episode_id} movie={movie} onMovieSelect={onMovieSelect} favorites={favorites}/>
           ))
         )}
     </div>

@@ -1,5 +1,8 @@
 import React from 'react';
+import LikeButton from "@/components/LikeButton/LikeButton";
 import './movieDetails.css'
+
+
 
 const movieImages = {
   "The Phantom Menace" : "phantomMenace1",
@@ -24,17 +27,16 @@ function MovieDetails({ movie, onFavoriteToggle, favorites }) {
       <div className='movie-poster'  style={moviePosterStyle}>
         <div className='left'>
           <h2>
-              {movie.title.split(' ').map((word, index) => (
-                <span key={index}>{word}</span>
-              ))}
-            </h2>
-          <button className='likeBtn' onClick={() => onFavoriteToggle(movie)}>
-            <div className='iconBox'>
-              <img src={require('../../icons/starIcon.png')} alt='star'/>
-              <span className='likeText'>{favorites.some(fav => fav.episode_id === movie.episode_id) ? "Dislike" : "Like"}</span>
-            </div>
-          </button>
-          {/* <p><strong>Episode:</strong> {movie.episode_id}</p> */}
+            {movie.title.split(' ').map((word, index) => (
+              <span key={index}>{word}</span>
+            ))}
+          </h2>
+          <LikeButton 
+            movie={movie} 
+            onFavoriteToggle={onFavoriteToggle} 
+            favorites={favorites}
+            className='likeBtn-container'
+          />
       </div>
         <div className='right'></div>
         

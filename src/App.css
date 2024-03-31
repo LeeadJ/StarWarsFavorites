@@ -42,16 +42,18 @@
   background-image: url('/Users/leeadj/Documents/JobProjects/StarWarsFavorites/src/images/stars2.png');
   background-size: cover;
   background-position: center;
-  
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
 
 .mainContainer {
   /* border: 2px solid red; */
-  height: 100%;
-  padding: 60px 200px;
+  padding: 1%;
+  width: 100%;
+  max-width: 1700px;
   display: flex;
   flex-direction: column; 
   gap: 15px;
@@ -59,18 +61,16 @@
 
 .chosenMovieContainer {
   /* background-color: pink; */
-  display: flex;
-  flex-direction: column;
   flex: 2;
-  /* width: 100%; */
 }
 
-.movieListContainer{
-  /* background-color: pink; */
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
+.movieListContainer{  
   flex: 1;
-  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    padding: 0.5%;
+  }
+
 }
