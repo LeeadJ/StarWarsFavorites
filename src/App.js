@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import MovieList from '@/components/MovieList/MovieList';
 import MovieDetails from '@/components/MovieDetails/MovieDetails';
 import './App.css';
+import videoBackground from '../src/videos/space-video.mp4'; 
+
 
 function App() {
   const initialFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -28,6 +30,9 @@ function App() {
 
   return (
     <div className="App">
+      <video className="video-background" autoPlay loop muted>
+        <source src={videoBackground} type="video/mp4" />
+      </video>
       <div className='mainContainer'>
         <div className='chosenMovieContainer'>
           <MovieDetails movie={selectedMovie} favorites={favorites} onFavoriteToggle={handleFavorite}/>

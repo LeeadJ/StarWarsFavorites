@@ -38,10 +38,7 @@
 }
 
 .App {
-  /* border: 3px dashed blue; */
-  background-image: url('/Users/leeadj/Documents/JobProjects/StarWarsFavorites/src/images/stars2.png');
-  background-size: cover;
-  background-position: center;
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,9 +46,19 @@
   align-items: center; 
 }
 
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .mainContainer {
-  /* border: 2px solid red; */
-  padding: 1%;
+  position: relative; 
+  z-index: 1;
+  padding: 5%;
   width: 100%;
   max-width: 1700px;
   display: flex;
@@ -69,8 +76,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .App {
+    padding: 3%;
+  }
   .mainContainer {
     padding: 0.5%;
   }
-
 }
+
+
