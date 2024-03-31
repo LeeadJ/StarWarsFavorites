@@ -72,7 +72,7 @@ Please notice the the SWAPI API might take some time to respond
     - Try to clone your code and run it - make sure all works after cloning
     - Make sure the site works as expected
 
-
+---
 # Solutions:
 
 **Debugging:**
@@ -82,4 +82,6 @@ Please notice the the SWAPI API might take some time to respond
 2. **Problem** - In the MovieItem component, when we click the button `onMovieSelect`, the `onMovieSelect` function is called without passing it the `movie` object as an argument. This function expects in argument. 
 **Solution** - We pass the movie object to the function when calling it onClick.
 
+---
+# Result:
 ![image](https://github.com/LeeadJ/StarWarsFavorites/assets/77110578/b68f3d9a-72f8-4d32-9da7-f51c53677c1d)
