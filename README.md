@@ -71,3 +71,13 @@ Please notice the the SWAPI API might take some time to respond
     - Once finished, upload the project to github.
     - Try to clone your code and run it - make sure all works after cloning
     - Make sure the site works as expected
+
+
+# Solutions:
+
+**Debugging:**
+1. **Problem** - In the MovieDetails component, the app is trying to call the `onFavoriteToggle` when the Like/Dislike button is clicked. The  problem is that the `onFavoriteToggle` prop is not passed to the MovieDetails component, which is why nothing is rendering.  
+**Solution** - we need to pass down the `onFavoriteToggle` prop to the MovieDetails component in the App component.
+<br>
+2. **Problem** - In the MovieItem component, when we click the button `onMovieSelect`, the `onMovieSelect` function is called without passing it the `movie` object as an argument. This function expects in argument. 
+**Solution** - We pass the movie object to the function when calling it onClick.
