@@ -35,7 +35,6 @@ function MovieDetails({ movie, onFavoriteToggle, favorites }) {
             movie={movie} 
             onFavoriteToggle={onFavoriteToggle} 
             favorites={favorites}
-            className='likeBtn-container'
           />
       </div>
         <div className='right'></div>

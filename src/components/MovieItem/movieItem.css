@@ -1,18 +1,17 @@
 .movie-poster-container {
-    width: calc(16.666% - 1%); 
-    height: auto; 
+    width: calc(16.666% - 1%);
+    height: auto;
     transition: transform 0.5s;
     border-radius: 15px;
     text-align: center;
     position: relative;
-    
-  }
 
-  .movie-poster-container:hover {
-    color: black;
+}
+
+.movie-poster-container:hover {
     transform: scale(1.1);
 }
- 
+
 .movie-poster-container .movie-title {
     position: absolute;
     bottom: 0;
@@ -25,15 +24,13 @@
     text-align: center;
     font-weight: 900;
     font-size: 0.9=8rem;
-  }
-
-
-  @media screen and (max-width: 768px) {
-.movie-poster-container {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 5%;
-  }
 }
-  
-  
+
+
+@media screen and (max-width: 768px) {
+    .movie-poster-container {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 5%;
+    }
+}
